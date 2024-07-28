@@ -1,5 +1,6 @@
 // src/components/Questionnaire.js
 import React, { useState } from 'react';
+import './Questionnaire.css';
 
 function Questionnaire() {
   const [formData, setFormData] = useState({
@@ -30,6 +31,7 @@ function Questionnaire() {
       <div>
         <h2>Thank you for submitting the questionnaire!</h2>
         <p>We will create a personalized roadmap for Web Development based on your responses.</p>
+        <a href="https://df42af93dea4f2ea5d.gradio.live/" className="try-app-button">Try the App!</a>
       </div>
     );
   }
@@ -80,7 +82,12 @@ function Questionnaire() {
           placeholder="What are your learning goals?"
         />
       </div>
-      <button type="submit">Submit</button>
+      <div className="button-container">
+        <button type="submit" className="submit-button">Submit</button>
+      </div>
+      <div className="button-container">
+        <a href="https://df42af93dea4f2ea5d.gradio.live/" className="try-app-button">Try the App!</a>
+      </div>
     </form>
   );
 }
